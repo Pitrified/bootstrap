@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt upgrade
+sudo apt -y upgrade
 sudo apt -y install chromium-browser
 sudo apt -y install python3-pip
 sudo apt -y install openjdk-8-jdk
@@ -20,7 +20,9 @@ python3 ~/dotfiles/install.py
 
 vim +PluginInstall +qall
 sudo apt -y install build-essential cmake python3-dev
-python3 ~/dotfiles/vim.symlink/bundle/YouCompleteMe/install.py
+python3 ~/dotfiles/vim.symlink/bundle/YouCompleteMe/install.py \
+    --clang-completer \
+    --java-completer
 
 sudo apt -y install tmux
 source ~/.bashrc 
