@@ -1,0 +1,5 @@
+export DISPLAY=:0
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=~/.virtualenvs
+source /home/pietro/.local/bin/virtualenvwrapper.sh
