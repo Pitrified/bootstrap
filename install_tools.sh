@@ -13,6 +13,7 @@ unzip exa-linux-x86_64-0.8.0.zip
 mkdir ~/.local
 mkdir ~/.local/bin
 mv exa-linux-x86_64 ~/.local/bin/exa
+# this might be done in ~/.profile already
 echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
 
 # BAT
@@ -24,3 +25,5 @@ source ~/.bashrc
 # HACK FONT
 # https://github.com/source-foundry/Hack
 sudo apt -y install fonts-hack-ttf
+
+echo ¨Remember to manually do ´source ~/.bashrc´¨
