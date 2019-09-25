@@ -4,6 +4,10 @@ sudo apt -y install chromium-browser
 sudo apt -y install python3-pip
 sudo apt -y install openjdk-8-jdk
 
+git clone https://github.com/Pitrified/dotfiles.git ~/dotfiles
+python3 ~/dotfiles/install.py
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 sudo apt -y install vim-gtk
@@ -14,9 +18,6 @@ mkdir ~/.myvim
 mkdir ~/.myvim/swap
 mkdir ~/.myvim/undo
 mkdir ~/.myvim/backup
-
-git clone https://github.com/Pitrified/dotfiles.git ~/dotfiles
-python3 ~/dotfiles/install.py
 
 vim +PluginInstall +qall
 sudo apt -y install build-essential cmake python3-dev
