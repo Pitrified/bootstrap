@@ -8,7 +8,7 @@ git clone https://github.com/Pitrified/dotfiles.git ~/dotfiles
 python3 ~/dotfiles/install.py
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-sudo add-apt-repository ppa:jonathonf/vim
+sudo add-apt-repository ppa:jonathonf/vim -y
 sudo apt update
 sudo apt -y install vim-gtk
 sudo apt -y install libcanberra-gtk-module
@@ -26,4 +26,7 @@ python3 ~/dotfiles/vim.symlink/bundle/YouCompleteMe/install.py \
     --java-completer
 
 sudo apt -y install tmux
-source ~/.bashrc 
+
+sudo apt install gnome-tweaks
+
+echo ¨Remember to manually do ´source ~/.bashrc´¨
