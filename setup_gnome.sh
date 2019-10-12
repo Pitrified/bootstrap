@@ -17,7 +17,11 @@ gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
 
+# auto hide dock
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
+gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
+
 # various
 gsettings set org.gnome.mutter attach-modal-dialogs false
 gsettings set org.gnome.nautilus.desktop trash-icon-visible false
-
