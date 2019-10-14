@@ -11,12 +11,14 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys www '<Super>w'
 
 # alt tab only shows windows in current workspace
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
+# secondary monitors linked to single workspace
+gsettings set org.gnome.mutter workspaces-only-on-primary false
 
 # top bar
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.interface clock-show-date true
 
-# night light
+# enable night light
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
 
