@@ -19,6 +19,9 @@ pip3 install black
 # pip3 install Pillow
 # pip3 install exifread
 
+# on Ubuntu, use TkAgg as backend for matplotlib or the plot will not show up
+# pyimagesearch.com/2015/08/24/resolved-matplotlib-figures-not-showing-up-or-displaying/
+
 # add in ~/.virtualenvs/postmkvirtualenv
 # pip install black
 
