@@ -11,6 +11,15 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys www '<Super>w'
 
 # alt tab only shows windows in current workspace
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
+# alt tab shows separate windows, not grouped by application
+# gsettings set org.gnome.desktop.wm.keybindings switch-applications @as []
+# gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward @as []
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
+# alt ` to change within same app (not really working)
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Alt>grave']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Alt>grave']"
+
 # secondary monitors linked to single workspace
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 
