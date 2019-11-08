@@ -27,6 +27,7 @@ python3 ~/dotfiles/vim.symlink/bundle/YouCompleteMe/install.py \
     --java-completer
 
 sudo apt -y install tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 sudo apt install gnome-tweaks
 
