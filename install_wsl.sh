@@ -14,3 +14,8 @@ sudo apt install xfce4
 sudo apt install gtk2-engines-pixbuf
 
 echo ¨Use startxfce4 to launch¨
+
+# for HiDPI screens
+# https://superuser.com/a/1370548
+# export GDK_SCALE=0.5
+# export GDK_DPI_SCALE=2
