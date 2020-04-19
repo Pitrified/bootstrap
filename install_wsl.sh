@@ -19,3 +19,7 @@ echo ¨Use startxfce4 to launch¨
 # https://superuser.com/a/1370548
 # export GDK_SCALE=0.5
 # export GDK_DPI_SCALE=2
+
+# set path color to yellow, put this in ~/.bash_aliases.local
+# PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;33m\]\w\[\033[00m\]\$ '
+
