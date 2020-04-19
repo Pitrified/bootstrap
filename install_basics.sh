@@ -19,7 +19,10 @@ mkdir ~/.myvim/swap
 mkdir ~/.myvim/undo
 mkdir ~/.myvim/backup
 
+# black needs this to create its venv
+sudo apt install python3-venv -y
 vim +PlugInstall
+# YouCompleteMe needs these
 sudo apt -y install build-essential cmake python3-dev
 python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer --java-completer
 
