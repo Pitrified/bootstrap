@@ -10,6 +10,7 @@ echo "export WORKON_HOME=~/.virtualenvs" >> ~/.bash_aliases.local
 echo "source ~/.local/bin/virtualenvwrapper.sh" >> ~/.bash_aliases.local
 
 pip3 install black
+pip3 install pytest
 
 # SCI
 # pip3 install numpy

@@ -7,8 +7,8 @@ yes | ~/.fzf/install
 # https://the.exa.website/
 mkdir ~/setup
 cd ~/setup
-wget https://github.com/ogham/exa/releases/download/v0.8.0/exa-linux-x86_64-0.8.0.zip
-unzip exa-linux-x86_64-0.8.0.zip
+wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
+unzip exa-linux-x86_64-0.9.0.zip
 mkdir ~/.local
 mkdir ~/.local/bin
 mv exa-linux-x86_64 ~/.local/bin/exa
@@ -17,8 +17,8 @@ echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
 
 # BAT
 # https://github.com/sharkdp/bat
-wget https://github.com/sharkdp/bat/releases/download/v0.11.0/bat_0.11.0_amd64.deb
-sudo dpkg -i bat_0.11.0_amd64.deb
+wget https://github.com/sharkdp/bat/releases/download/v0.13.0/bat_0.13.0_amd64.deb
+sudo dpkg -i bat_0.13.0_amd64.deb
 
 # HACK FONT
 # https://github.com/source-foundry/Hack
