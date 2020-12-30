@@ -41,8 +41,8 @@ Download and install the toolkit from
 * https://developer.nvidia.com/cuda-toolkit
 
 ```
-chmod +x cuda_10.0.130_410.48_linux.run 
-sudo ./cuda_10.0.130_410.48_linux.run
+chmod +x cuda_11.1.1_455.32.00_linux.run 
+sudo ./cuda_11.1.1_455.32.00_linux.run 
 ```
 
 Do not install the driver included
@@ -50,18 +50,17 @@ Do not install the driver included
 Add it to the path in `~/.bashrc`
 
 ```
-export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export PATH=/usr/local/cuda-11.1/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
 
 Verify the installation
 
 ```
 nvcc -V
-cd ~/NVIDIA_CUDA-10.0_Samples
+cd ~/NVIDIA_CUDA-11.1_Samples
 make
-cd ~/NVIDIA_CUDA-10.0_Samples/bin/x86_64/linux/release
-./deviceQuery
+~/NVIDIA_CUDA-11.1_Samples/bin/x86_64/linux/release/deviceQuery
 ```
 
 ### Install drivers
@@ -82,8 +81,8 @@ Download the driver from
 * https://www.nvidia.com/Download/Find.aspx
 
 ```
-chmod +x NVIDIA-Linux-x86_64–430.40.run
-sudo ./NVIDIA-Linux-x86_64–430.40.run
+chmod +x NVIDIA-Linux-x86_64-455.38.run 
+sudo ./NVIDIA-Linux-x86_64-455.38.run 
 ```
 
 Say no to xconfig, then reboot and check with `nvidia-smi`
@@ -103,30 +102,33 @@ cuDNN Code Samples and User Guide for Ubuntu18.04 (Deb)
 Then install them
 
 ```
-sudo dpkg -i libcudnn7_7.4.2.24-1+cuda10.0_amd64.deb
-sudo dpkg -i libcudnn7-dev_7.4.2.24-1+cuda10.0_amd64.deb
-sudo dpkg -i libcudnn7-doc_7.4.2.24-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn8_8.0.5.39-1+cuda11.1_amd64.deb 
+sudo dpkg -i libcudnn8-dev_8.0.5.39-1+cuda11.1_amd64.deb 
+sudo dpkg -i libcudnn8-samples_8.0.5.39-1+cuda11.1_amd64.deb 
 ```
 
 Verify the installation
 
 ```
-cp -r /usr/src/cudnn_samples_v7/ $HOME
-cd $HOME/cudnn_samples_v7/mnistCUDNN
+cp -r /usr/src/cudnn_samples_v8/ $HOME
+cd $HOME/cudnn_samples_v8/mnistCUDNN
 make clean && make
 ./mnistCUDNN
 ```
 
 ### Install tensorflow
 
+Tensorflow 2.4 uses cuda 11, no need for nightly version
+
 ```
-pip install tf-nightly-gpu
+pip install tensorflow
 ```
 
 Test
 
 ```
 python -c "from tensorflow.python.client import device_lib; print(device_lib.list_local_devices())"
+python -c "import tensorflow as tf; print(tf.test.is_gpu_available()); print(tf.test.is_built_with_cuda());"
 ```
 
 ```
@@ -138,12 +140,10 @@ tf.test.is_built_with_cuda()
 
 ### Link missing libraries
 
-Some libraries will have the wrong name, link the one that you need to the one that you have
+Some libraries will have the wrong name, link the one that you have to the one that you need
 
 * https://fantashit.com/cuda-11-1-error-on-tf-nightly-libcusolver-so-10-not-found/
 
 ```
 sudo ln -s /usr/local/cuda-11.1/targets/x86_64-linux/lib/libcusolver.so.11 /usr/local/cuda-11.1/targets/x86_64-linux/lib/libcusolver.so.10
 ```
-
-
