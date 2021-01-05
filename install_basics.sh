@@ -35,6 +35,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # TODO add teamocil install
 # https://github.com/remi/teamocil
 
-sudo apt install gnome-tweaks
+# misc
+sudo apt -y install gnome-tweaks
+sudo apt -y install silversearcher-ag
 
 echo ¨Remember to manually do ´source ~/.bashrc´¨
