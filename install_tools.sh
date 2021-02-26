@@ -17,8 +17,8 @@ echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
 
 # BAT
 # https://github.com/sharkdp/bat
-wget https://github.com/sharkdp/bat/releases/download/v0.13.0/bat_0.13.0_amd64.deb
-sudo dpkg -i bat_0.13.0_amd64.deb
+wget https://github.com/sharkdp/bat/releases/download/v0.17.1/bat_0.17.1_amd64.deb
+sudo dpkg -i bat_0.17.1_amd64.deb
 
 # HACK FONT
 # https://github.com/source-foundry/Hack
