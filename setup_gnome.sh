@@ -36,6 +36,17 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 
-# various
+# let modal dialogs move independently from the main windows
 gsettings set org.gnome.mutter attach-modal-dialogs false
-gsettings set org.gnome.nautilus.desktop trash-icon-visible false
+
+# hide home and trash folders from the desktop
+# gsettings set org.gnome.nautilus.desktop trash-icon-visible false
+gsettings set org.gnome.shell.extensions.desktop-icons show-home false
+gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
+
+# setup the terminal
+# https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
+GNOME_TERMINAL_PROFILE=`gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}'`
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ default-size-columns 130
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ default-size-rows 30
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ scrollbar-policy 'never'
