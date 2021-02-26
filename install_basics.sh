@@ -3,7 +3,7 @@ sudo apt -y upgrade
 sudo apt -y install chromium-browser
 sudo apt -y install python3-pip
 pip3 install black
-sudo apt -y install openjdk-8-jdk
+# sudo apt -y install openjdk-8-jdk
 
 git clone https://github.com/Pitrified/dotfiles.git ~/dotfiles
 python3 ~/dotfiles/install.py
@@ -27,7 +27,9 @@ sudo apt install curl -y
 vim +PlugInstall
 # YouCompleteMe needs these
 sudo apt -y install build-essential cmake python3-dev
-python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer --java-completer
+# compile YouCompleteMe
+# python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer --java-completer
+python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer
 
 sudo apt -y install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
