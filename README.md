@@ -2,6 +2,14 @@
 
 ### Install
 
+##### History
+
+Add useful history
+
+```
+cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
+```
+
 ##### `install_basics`
 
 * vim
@@ -24,6 +32,14 @@
 * virtualenv
 * black
 * pytest
+
+##### `finish_python`
+
+Add postmkvirtualenv hooks
+
+##### `install_cuda_dep`
+
+* various libs for cuda
 
 ##### `install_wsl`
 
