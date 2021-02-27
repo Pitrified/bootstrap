@@ -12,3 +12,5 @@ sudo apt-get install -y libhdf5-serial-dev graphviz
 sudo apt-get install -y python3-dev python3-tk python-imaging-tk
 sudo apt-get install -y linux-image-generic linux-image-extra-virtual
 sudo apt-get install -y linux-source linux-headers-generic
+# this actually was needed for cuda 11.2
+sudo apt install -y libfreeimage-dev

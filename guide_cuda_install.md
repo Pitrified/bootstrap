@@ -30,6 +30,7 @@ sudo apt-get install -y libhdf5-serial-dev graphviz
 sudo apt-get install -y python3-dev python3-tk python-imaging-tk
 sudo apt-get install -y linux-image-generic linux-image-extra-virtual
 sudo apt-get install -y linux-source linux-headers-generic
+sudo apt install -y libfreeimage-dev
 ```
 
 Copy and paste the code above and save as a xxxxx.sh file, then run them all in one go, who cares
