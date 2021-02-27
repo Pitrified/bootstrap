@@ -1,0 +1,19 @@
+GNOME_TERMINAL_PROFILE=`gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}'`
+apt list --upgradable
+cd ~/bootstrap/
+cd ~/dotfiles/
+dconf watch /
+echo $GNOME_TERMINAL_PROFILE 
+echo $LD_LIBRARY_PATH 
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ scrollbar-policy 'always'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ scrollbar-policy 'never'
+nvidia-smi 
+nvidia-smi --query
+python -c "from tensorflow.python.client import device_lib; print(device_lib.list_local_devices())"
+python -c "import tensorflow as tf; print(tf.test.is_gpu_available()); print(tf.test.is_built_with_cuda());"
+source ~/.bashrc 
+sudo apt update
+sudo apt upgrade 
+sudo updatedb
+systemctl suspend && exit
+watch -n 2 nvidia-smi
