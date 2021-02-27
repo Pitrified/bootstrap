@@ -5,12 +5,23 @@ cd ~/dotfiles/
 dconf watch /
 echo $GNOME_TERMINAL_PROFILE 
 echo $LD_LIBRARY_PATH 
+gitid pitransit@mail.com Pitransit
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ scrollbar-policy 'always'
 gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ scrollbar-policy 'never'
+lscpu
+lshw
+lspci
+lspci -vvnn | grep VGA
+lspci | grep -E 'VGA|Display|3D'
+lsusb
 nvidia-smi 
 nvidia-smi --query
 python -c "from tensorflow.python.client import device_lib; print(device_lib.list_local_devices())"
 python -c "import tensorflow as tf; print(tf.test.is_gpu_available()); print(tf.test.is_built_with_cuda());"
+settextzoom 1
+settextzoom 1.3
+settextzoom 1.5
+settextzoom 2
 source ~/.bashrc 
 sudo apt update
 sudo apt upgrade 
