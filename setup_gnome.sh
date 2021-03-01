@@ -37,7 +37,8 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dock-position 'BOTTOM'
 gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
 # https://askubuntu.com/a/1250030
 # https://bugs.launchpad.net/ubuntu/+source/gnome-shell-extension-ubuntu-dock/+bug/1870519
-gsettings set org.gnome.shell.extensions.dash-to-dock intellihide true
+# https://discourse.ubuntu.com/t/ubuntu-dock-add-true-autohide-option-to-default-session/11200/4
+gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
 gsettings set org.gnome.shell.extensions.dash-to-dock pressure-threshold 100
 gsettings set org.gnome.shell.extensions.dash-to-dock require-pressure-to-show true
 
