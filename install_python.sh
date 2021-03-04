@@ -20,6 +20,11 @@ pip3 install pytest
 # pip3 install Pillow
 # pip3 install exifread
 
+# also remember to install tk for the right version of python if you are not using the default
+# sudo apt install python3.7-tk
+# https://stackoverflow.com/a/25905642/2237151
+
+# this should not be needed anymore
 # on Ubuntu, use TkAgg as backend for matplotlib or the plot will not show up
 # pyimagesearch.com/2015/08/24/resolved-matplotlib-figures-not-showing-up-or-displaying/
 
