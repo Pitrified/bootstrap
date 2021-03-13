@@ -59,3 +59,6 @@ gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profi
 
 # setup default columns on nautilus
 gsettings set org.gnome.nautilus.list-view default-visible-columns "['name', 'size', 'date_modified_with_time', 'detailed_type']"
+
+# theme for gedit
+gsettings set org.gnome.gedit.preferences.editor scheme 'cobalt'
