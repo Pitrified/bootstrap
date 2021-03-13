@@ -25,6 +25,7 @@ gsettings set org.gnome.mutter workspaces-only-on-primary false
 # top bar
 gsettings set org.gnome.desktop.interface show-battery-percentage true
 gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 # enable night light
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
