@@ -29,7 +29,7 @@ vim +PlugInstall
 sudo apt -y install build-essential cmake python3-dev
 # compile YouCompleteMe
 # python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer --java-completer
-python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer
+python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer --go-completer
 
 sudo apt -y install tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
