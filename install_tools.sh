@@ -11,16 +11,20 @@ yes | ~/.fzf/install
 
 # EXA
 # https://the.exa.website/
-mkdir ~/setup_bootstrap
-cd ~/setup_bootstrap
-wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
-unzip exa-linux-x86_64-0.9.0.zip
-mv exa-linux-x86_64 ~/.local/bin/exa
+# since Ubuntu 20.10
+sudo apt install exa
+# mkdir ~/setup_bootstrap
+# cd ~/setup_bootstrap
+# wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-0.10.0.zip
+# unzip exa-linux-x86_64-0.10.0.zip
+# mv exa-linux-x86_64 ~/.local/bin/exa
 
 # BAT
 # https://github.com/sharkdp/bat
-wget https://github.com/sharkdp/bat/releases/download/v0.17.1/bat_0.17.1_amd64.deb
-sudo dpkg -i bat_0.17.1_amd64.deb
+# since Ubuntu 19.10
+sudo apt install bat
+# wget https://github.com/sharkdp/bat/releases/download/v0.21.0/bat_0.21.0_amd64.deb
+# sudo dpkg -i bat_0.21.0_amd64.deb
 
 # HACK FONT
 # https://github.com/source-foundry/Hack
