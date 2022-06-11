@@ -1,3 +1,9 @@
+# I have no idea where this should be, but I don't really like it here
+mkdir ~/.local
+mkdir ~/.local/bin
+# this might be done in ~/.profile already
+echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
+
 # FZF
 # https://github.com/junegunn/fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -5,15 +11,11 @@ yes | ~/.fzf/install
 
 # EXA
 # https://the.exa.website/
-mkdir ~/setup
-cd ~/setup
+mkdir ~/setup_bootstrap
+cd ~/setup_bootstrap
 wget https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_64-0.9.0.zip
 unzip exa-linux-x86_64-0.9.0.zip
-mkdir ~/.local
-mkdir ~/.local/bin
 mv exa-linux-x86_64 ~/.local/bin/exa
-# this might be done in ~/.profile already
-echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
 
 # BAT
 # https://github.com/sharkdp/bat
