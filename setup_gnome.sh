@@ -50,6 +50,8 @@ gsettings set org.gnome.mutter attach-modal-dialogs false
 # gsettings set org.gnome.nautilus.desktop trash-icon-visible false
 gsettings set org.gnome.shell.extensions.desktop-icons show-home false
 gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
+# 22.04
+gsettings set org.gnome.shell.extensions.ding show-home false
 
 # setup the terminal
 # https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
