@@ -65,3 +65,6 @@ gsettings set org.gnome.nautilus.list-view default-visible-columns "['name', 'si
 
 # theme for gedit
 gsettings set org.gnome.gedit.preferences.editor scheme 'cobalt'
+
+# show hidden files
+gsettings set org.gtk.settings.file-chooser show-hidden true
