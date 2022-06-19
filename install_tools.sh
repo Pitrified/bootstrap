@@ -15,8 +15,8 @@ yes | ~/.fzf/install
 sudo apt install exa
 # mkdir ~/setup_bootstrap
 # cd ~/setup_bootstrap
-# wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-0.10.0.zip
-# unzip exa-linux-x86_64-0.10.0.zip
+# wget https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
+# unzip exa-linux-x86_64-v0.10.0.zip
 # mv exa-linux-x86_64 ~/.local/bin/exa
 
 # BAT
