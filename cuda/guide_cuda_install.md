@@ -157,6 +157,10 @@ cd /usr/local/cuda-11.7/extras/demo_suite/
 
 ### Install cuDNN
 
+The
+[install guide](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html#installlinux-deb)
+is actually pretty good
+
 Install zlib?
 
 ```bash
