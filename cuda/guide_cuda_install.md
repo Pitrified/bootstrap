@@ -82,6 +82,19 @@ echo sudo systemctl start gdm3
 
 reboot or whatever, then use `Ctrl+Alt+F1` to change `tty1`, now you can install.
 
+The CUDA installer calls the driver install with a bunch of options that might be useful:
+
+```bash
+NVIDIA-Linux-x86_64-515.43.04.run
+--ui=none
+--no-questions
+--accept-license
+--disable-nouveau
+--no-cc-version-check
+--install-libglvnd
+2>&1
+```
+
 ### CUDA Toolkit
 
 Download and install the toolkit from
