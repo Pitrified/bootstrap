@@ -41,4 +41,8 @@ python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-complete
 sudo apt -y install gnome-tweaks
 sudo apt -y install silversearcher-ag
 
+# folders
+mkdir ~/ephem
+mkdir ~/repos
+
 echo ¨Remember to manually do ´source ~/.bashrc´¨
