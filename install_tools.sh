@@ -36,4 +36,17 @@ sudo apt -y install fonts-hack-ttf
 # useful to find files
 sudo apt -y install plocate
 
+# tweak gnome settings
+sudo apt -y install gnome-tweaks
+
+# fancy search tool
+sudo apt -y install silversearcher-ag
+
+# 7zip
+sudo apt -y install p7zip-full
+sudo snap install p7zip-desktop
+
+# clipboard
+sudo apt -y install xclip
+
 echo ¨Remember to manually do ´source ~/.bashrc´¨

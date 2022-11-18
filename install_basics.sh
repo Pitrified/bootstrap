@@ -37,10 +37,6 @@ python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-complete
 # TODO add teamocil install
 # https://github.com/remi/teamocil
 
-# misc
-sudo apt -y install gnome-tweaks
-sudo apt -y install silversearcher-ag
-
 # folders
 mkdir ~/ephem
 mkdir ~/repos

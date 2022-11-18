@@ -10,15 +10,19 @@ Add useful history
 cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 ```
 
+##### `install_go`
+
+* golang
+
 ##### `install_basics`
 
-* vim
-* chromium
 * python
+* vim
 * dotfiles
 * tmux
 * gnome tweaks
 * silversearcher-ag
+* 7zip
 
 ##### `install_tools`
 
