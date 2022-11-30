@@ -5,6 +5,9 @@ wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
 
+# for fyne
+sudo apt install -y libgl1-mesa-dev xorg-dev
+
 echo "" >> ~/.bash_aliases.local
 echo "# Golang" >> ~/.bash_aliases.local
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bash_aliases.local
