@@ -14,20 +14,19 @@ cd ~/setup_bootstrap
 
 # EXA
 # https://the.exa.website/
-# since Ubuntu 20.10
-# sadly this version does not include --git
-# sudo apt install exa -y
-wget https://github.com/ogham/exa/releases/download/v0.10.1/exa-linux-x86_64-v0.10.1.zip
-unzip exa-linux-x86_64-v0.10.1.zip
-# mv exa-linux-x86_64 ~/.local/bin/exa # not anymore
-cp ~/setup_bootstrap/bin/exa ~/.local/bin/ # something like this
+EXA_V="0.10.1"
+wget https://github.com/ogham/exa/releases/download/v${EXA_V}/exa-linux-x86_64-v${EXA_V}.zip
+unzip exa-linux-x86_64-v${EXA_V}.zip
+cp ~/setup_bootstrap/bin/exa ~/.local/bin/
 
 # BAT
 # https://github.com/sharkdp/bat
-# since Ubuntu 19.10
-# sudo apt install bat -y
-wget https://github.com/sharkdp/bat/releases/download/v0.22.1/bat_0.22.1_amd64.deb
-sudo dpkg -i bat_0.22.1_amd64.deb
+BAT_V="0.23.0"
+wget https://github.com/sharkdp/bat/releases/download/v${BAT_V}/bat_${BAT_V}_amd64.deb
+sudo dpkg -i bat_${BAT_V}_amd64.deb
+# https://github.com/sharkdp/bat/issues/982 https://github.com/sharkdp/bat/issues/1420
+alias bat='batcat'
+ln -s /usr/bin/bat ~/.local/bin/batcat
 
 # HACK FONT
 # https://github.com/source-foundry/Hack
