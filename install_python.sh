@@ -1,14 +1,15 @@
 # more python versions
-sudo add-apt-repository ppa:deadsnakes/ppa
-sudo apt update
+sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo apt update -y
 
 # the current version for this release
-sudo apt install python3-venv python3-pip
+sudo apt install python3-venv python3-pip -y
 
 # another version
-sudo apt install python3.10-dev
-sudo apt install python3.10-pip
-sudo apt install python3.10-venv
+PY_V="3.11"
+sudo apt install python${PY_V}-dev -y
+sudo apt install python${PY_V}-pip -y
+sudo apt install python${PY_V}-venv -y
 
 # this might kill your pip command, as there is no pip3.8,
 # and pip has been overwritten
@@ -18,13 +19,14 @@ sudo apt install python3.10-venv
 # python3.10 -m venv venv
 # source venv/bin/activate
 
-# maybe also need this?
+# might also need this to have pip
 # wget https://bootstrap.pypa.io/get-pip.py
+# note the python version that calls the script
 # python3.10 get-pip.py 
+# which might need distutils as dependency
 # sudo apt-get install python3.10-distutils
 
 # virtualenv is still neat because of the wrapper
-
 pip3 install virtualenv
 pip3 install virtualenvwrapper
 mkdir ~/.virtualenvs
@@ -35,6 +37,10 @@ echo "export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3" >> ~/.bash_aliases.local
 echo "export WORKON_HOME=~/.virtualenvs" >> ~/.bash_aliases.local
 # echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_aliases.local
 echo "source ~/.local/bin/virtualenvwrapper.sh" >> ~/.bash_aliases.local
+
+# poetry
+# https://python-poetry.org/docs/
+curl -sSL https://install.python-poetry.org | python3 -
 
 # pip3 install black
 # pip3 install pytest
