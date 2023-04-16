@@ -42,4 +42,7 @@ sudo snap install p7zip-desktop
 # clipboard
 sudo apt -y install xclip
 
+# vscode
+sudo snap install code --classic
+
 echo ¨Remember to manually do ´source ~/.bashrc´¨
