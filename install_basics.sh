@@ -8,37 +8,20 @@ sudo apt -y install python3-pip
 git clone https://github.com/Pitrified/dotfiles.git ~/dotfiles
 python3 ~/dotfiles/install.py
 
-# sudo add-apt-repository ppa:jonathonf/vim -y
-# sudo apt update
-# sudo apt -y install vim-gtk
-# sudo apt -y install libcanberra-gtk-module
-# sudo apt -y install libcanberra-gtk3-module
+# add path
+mkdir ~/.local
+mkdir ~/.local/bin
+# this might be done in ~/.profile already
+echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
 
-mkdir ~/.myvim
-mkdir ~/.myvim/swap
-mkdir ~/.myvim/undo
-mkdir ~/.myvim/backup
-
-# black needs this to create its venv
-sudo apt install python3-venv -y
-# vim needs this to clone Plug
-sudo apt install curl -y
-# TODO this needs to be manually closed
-vim +PlugInstall
-# YouCompleteMe needs these
-sudo apt -y install build-essential cmake python3-dev
-# compile YouCompleteMe
-# python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer --java-completer
-python3 ~/dotfiles/vim.symlink/plugged/YouCompleteMe/install.py --clang-completer --go-completer
+# misc folders
+mkdir ~/ephem
+mkdir ~/repos
 
 # sudo apt -y install tmux
 # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # TODO add teamocil install
 # https://github.com/remi/teamocil
-
-# folders
-mkdir ~/ephem
-mkdir ~/repos
 
 echo ¨Remember to manually do ´source ~/.bashrc´¨

@@ -1,9 +1,3 @@
-# I have no idea where this should be, but I don't really like it here
-mkdir ~/.local
-mkdir ~/.local/bin
-# this might be done in ~/.profile already
-echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
-
 # FZF
 # https://github.com/junegunn/fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
