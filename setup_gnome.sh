@@ -42,6 +42,9 @@ gsettings set org.gnome.shell.extensions.dash-to-dock multi-monitor true
 gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
 gsettings set org.gnome.shell.extensions.dash-to-dock pressure-threshold 100
 gsettings set org.gnome.shell.extensions.dash-to-dock require-pressure-to-show true
+gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts-only-mounted true
+gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts-network false
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 
 # let modal dialogs move independently from the main windows
 gsettings set org.gnome.mutter attach-modal-dialogs false
