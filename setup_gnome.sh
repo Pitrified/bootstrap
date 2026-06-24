@@ -5,6 +5,7 @@
 
 # theme
 gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 # shortcuts
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
@@ -50,24 +51,36 @@ gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 gsettings set org.gnome.mutter attach-modal-dialogs false
 
 # hide home and trash folders from the desktop
-# gsettings set org.gnome.nautilus.desktop trash-icon-visible false
-gsettings set org.gnome.shell.extensions.desktop-icons show-home false
-gsettings set org.gnome.shell.extensions.desktop-icons show-trash false
-# 22.04
+# the ding (desktop icons NG) extension provides these keys
 gsettings set org.gnome.shell.extensions.ding show-home false
+gsettings set org.gnome.shell.extensions.ding show-trash false
 
-# setup the terminal
-# https://ncona.com/2019/11/configuring-gnome-terminal-programmatically/
-GNOME_TERMINAL_PROFILE=`gsettings get org.gnome.Terminal.ProfilesList default | awk -F \' '{print $2}'`
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ default-size-columns 130
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ default-size-rows 30
-gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$GNOME_TERMINAL_PROFILE/ scrollbar-policy 'never'
+# setup the terminal (Ptyxis)
+# size and scrollbar are global keys (not per-profile)
+gsettings set org.gnome.Ptyxis default-columns 130
+gsettings set org.gnome.Ptyxis default-rows 30
+gsettings set org.gnome.Ptyxis scrollbar-policy 'never'
+# palette is per-profile; resolve the default profile uuid
+PTYXIS_PROFILE=$(gsettings get org.gnome.Ptyxis default-profile-uuid | tr -d \')
+gsettings set "org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/$PTYXIS_PROFILE/" palette 'gnome'
 
 # setup default columns on nautilus
 gsettings set org.gnome.nautilus.list-view default-visible-columns "['name', 'size', 'date_modified_with_time', 'detailed_type']"
 
-# theme for gedit
-gsettings set org.gnome.gedit.preferences.editor scheme 'cobalt'
+# theme for the text editor (GNOME Text Editor)
+gsettings set org.gnome.TextEditor style-scheme 'cobalt'
 
 # show hidden files
-gsettings set org.gtk.settings.file-chooser show-hidden true
+# set both the GTK3 and GTK4 file chooser schemas
+gsettings set org.gtk.Settings.FileChooser show-hidden true
+gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true
+
+# never blank/sleep when on AC power
+gsettings set org.gnome.settings-daemon.plugins.power sleep-inactive-ac-type 'nothing'
+
+# break reminders: eyesight + movement, with sounds
+gsettings set org.gnome.desktop.break-reminders selected-breaks "['eyesight', 'movement']"
+gsettings set org.gnome.desktop.break-reminders.movement interval-seconds 1800
+gsettings set org.gnome.desktop.break-reminders.movement duration-seconds 300
+gsettings set org.gnome.desktop.break-reminders.movement play-sound true
+gsettings set org.gnome.desktop.break-reminders.eyesight play-sound true
