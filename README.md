@@ -31,6 +31,10 @@ cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 * bat
 * hack fonts
 
+##### `install_git_lfs`
+
+* git-lfs (via packagecloud apt repo, so `apt` tracks the latest release)
+
 ##### `install_python`
 
 * virtualenv
