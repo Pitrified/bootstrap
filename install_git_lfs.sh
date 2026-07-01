@@ -9,7 +9,13 @@ curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.s
 
 sudo apt-get install -y git-lfs
 
-# One-time per-user setup: installs the git hooks / filters.
-git lfs install
+# One-time per-user setup: install the global clean/smudge filters only.
+# --skip-repo: do NOT install hooks into whatever repo is the current directory.
+# Running plain `git lfs install` inside a repo drops a pre-push hook there; that
+# hook runs a lock-verification API call on every push, which a fine-grained
+# GitHub PAT can't satisfy (403) - blocking pushes even in repos with no LFS files.
+# The global filters set here are all that real LFS repos need; their per-repo
+# hooks get installed when you clone them.
+git lfs install --skip-repo
 
 git lfs version
