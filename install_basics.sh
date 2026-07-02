@@ -13,7 +13,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
 
 git clone https://github.com/Pitrified/dotfiles.git ~/dotfiles
-python3 ~/dotfiles/install.py
+uv run --project ~/dotfiles/install ~/dotfiles/install/install.py
 
 # add path
 mkdir ~/.local
