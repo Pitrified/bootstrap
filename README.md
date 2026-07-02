@@ -17,6 +17,7 @@ cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 ##### `install_basics`
 
 * python
+* uv
 * vim
 * dotfiles
 * tmux

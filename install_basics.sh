@@ -6,6 +6,12 @@ sudo apt -y install python3-pip
 # sudo apt -y install chromium-browser
 # sudo apt -y install openjdk-8-jdk
 
+# install uv, and make it usable for the rest of *this* script run
+# (the installer only persists PATH for future shells via rc-file
+# sourcing, not the already-running script)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+export PATH="$HOME/.local/bin:$PATH"
+
 git clone https://github.com/Pitrified/dotfiles.git ~/dotfiles
 python3 ~/dotfiles/install.py
 
