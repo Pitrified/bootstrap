@@ -2,11 +2,11 @@
 # https://github.com/git-lfs/git-lfs
 # Release notes: https://github.com/git-lfs/git-lfs/releases
 
-# Add the official packagecloud apt repo. This makes `apt` track the latest
-# release automatically, so `sudo apt upgrade` keeps git-lfs current and there
-# is no version to pin by hand.
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-
+# Install from Ubuntu's own repos (universe / ESM). git-lfs is packaged there and
+# gets security updates through the normal apt channel - no third-party repo to
+# maintain. We previously used the packagecloud repo, but it only builds for
+# released Ubuntu codenames: on a new release (e.g. 26.04 "resolute") its Release
+# file 404s and breaks `apt update`. See plans/2026-07-09-00-remove-packagecloud-git-lfs-repo.md.
 sudo apt-get install -y git-lfs
 
 # One-time per-user setup: install the global clean/smudge filters only.
