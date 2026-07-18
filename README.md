@@ -28,9 +28,13 @@ cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 ##### `install_tools`
 
 * fzf
-* exa
+* eza
 * bat
 * hack fonts
+
+##### `install_backup`
+
+* rclone
 
 ##### `install_git_lfs`
 
