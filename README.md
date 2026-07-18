@@ -1,20 +1,20 @@
 # Ubuntu setup
 
-### Install
+## Bootstrap
 
-##### History
+download [bootstrap.sh](bootstrap.sh), run it, you get this repo
 
-Add useful history
+## Install
+
+### History
+
+Add useful history for `Ctrl+R` search in bash:
 
 ```
 cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 ```
 
-##### `install_go`
-
-* golang
-
-##### `install_basics`
+### `install_basics`
 
 * python
 * uv
@@ -25,36 +25,35 @@ cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 * silversearcher-ag
 * 7zip
 
-##### `install_tools`
+### `install_tools`
 
 * fzf
 * eza (was exa)
 * bat
 * hack fonts
 
-##### `install_backup`
+### `install_backup`
 
 * rclone
 
-##### `install_git_lfs`
+### `install_git_lfs`
 
 * git-lfs (via packagecloud apt repo, so `apt` tracks the latest release)
 
-##### `install_python`
+### `install_python`
 
 * virtualenv
 * black
 * pytest
 
-##### `finish_python`
+### `install_go`
 
-Add postmkvirtualenv hooks
+* golang
 
-##### `install_cuda_dep`
+### `install_cuda_dep`
 
 * various libs for cuda
 
-##### `install_wsl`
+### `install_wsl`
 
 * export magic to use the graphical desktop
-
