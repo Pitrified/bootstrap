@@ -28,7 +28,7 @@ cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 ##### `install_tools`
 
 * fzf
-* eza
+* eza (was exa)
 * bat
 * hack fonts
 
