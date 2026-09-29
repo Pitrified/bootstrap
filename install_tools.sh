@@ -56,4 +56,7 @@ sudo snap install code --classic
 # claude
 curl -fsSL https://claude.ai/install.sh | bash
 
+# tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
 echo "Remember to manually do 'source ~/.bashrc'"

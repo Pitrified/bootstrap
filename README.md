@@ -4,7 +4,21 @@
 
 download [bootstrap.sh](bootstrap.sh), run it, you get this repo
 
+```bash
+sudo apt install curl
+curl -O https://raw.githubusercontent.com/Pitrified/bootstrap/main/bootstrap.sh
+bash bootstrap.sh
+```
+
 ## Install
+
+### Minimal
+
+```bash
+bash install_basics.sh
+bash install_tools.sh
+bash setup_gnome.sh
+```
 
 ### History
 

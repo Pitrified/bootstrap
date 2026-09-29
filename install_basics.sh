@@ -1,7 +1,10 @@
 sudo apt update
 sudo apt -y upgrade
+sudo apt autoremove -y
 
-sudo apt -y install python3-pip
+sudo apt install curl
+
+# sudo apt -y install python3-pip
 
 # sudo apt -y install chromium-browser
 # sudo apt -y install openjdk-8-jdk
@@ -18,7 +21,6 @@ uv run --project ~/dotfiles/install ~/dotfiles/install/install.py
 # add path
 mkdir ~/.local
 mkdir ~/.local/bin
-# this might be done in ~/.profile already
 echo "export PATH=\$PATH:~/.local/bin" >> ~/.bash_aliases.local
 
 # misc folders
