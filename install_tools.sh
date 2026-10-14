@@ -28,18 +28,16 @@ wget https://github.com/sharkdp/bat/releases/download/v${BAT_V}/bat_${BAT_V}_amd
 sudo dpkg -i bat_${BAT_V}_amd64.deb
 # https://github.com/sharkdp/bat/issues/982 https://github.com/sharkdp/bat/issues/1420
 # alias bat='batcat' ? how is this permanent?
+mkdir -p ~/.local/bin
 ln -s /usr/bin/bat ~/.local/bin/batcat
 
 # BTOP
-# https://github.com/aristocratos/btop#installation
-BTOP_V="1.4.7"
-wget https://github.com/aristocratos/btop/releases/download/v${BTOP_V}/btop-x86_64-unknown-linux-musl.tar.gz
-tar -xvzf btop-x86_64-unknown-linux-musl.tar.gz
-sudo make -C btop install
+# from the Ubuntu archive, so apt keeps it updated
+sudo apt -y install btop
 
 # HACK FONT
 # https://github.com/source-foundry/Hack
-sudo apt -y install fonts-hack-ttf
+sudo apt -y install fonts-hack
 
 # useful to find files
 sudo apt -y install plocate
@@ -52,7 +50,6 @@ sudo apt -y install silversearcher-ag
 
 # 7zip
 sudo apt -y install p7zip-full
-sudo snap install p7zip-desktop
 
 # clipboard
 sudo apt -y install xclip

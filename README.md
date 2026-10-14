@@ -6,13 +6,15 @@ download [bootstrap.sh](bootstrap.sh), run it, you get this repo
 
 ```bash
 sudo apt install curl
-curl -O https://raw.githubusercontent.com/Pitrified/bootstrap/main/bootstrap.sh
+curl -O https://raw.githubusercontent.com/Pitrified/bootstrap/master/bootstrap.sh
 bash bootstrap.sh
 ```
 
 ## Install
 
 ### Minimal
+
+Run in this order: `install_tools.sh` expects `~/.local/bin`, which `install_basics.sh` creates.
 
 ```bash
 bash install_basics.sh
