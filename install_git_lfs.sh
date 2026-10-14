@@ -6,7 +6,7 @@
 # gets security updates through the normal apt channel - no third-party repo to
 # maintain. We previously used the packagecloud repo, but it only builds for
 # released Ubuntu codenames: on a new release (e.g. 26.04 "resolute") its Release
-# file 404s and breaks `apt update`. See plans/2026-07-09-00-remove-packagecloud-git-lfs-repo.md.
+# file 404s and breaks `apt update`. See plans/2026-07-09_00_remove_packagecloud_git_lfs_repo.md.
 sudo apt-get install -y git-lfs
 
 # One-time per-user setup: install the global clean/smudge filters only.
