@@ -47,6 +47,7 @@ cat ~/bootstrap/useful_bash_history.txt >> ~/.bash_history
 * eza (was exa)
 * bat
 * hack fonts
+* xtermcontrol, shellcheck, zellij
 
 ### `install_backup`
 

@@ -54,6 +54,15 @@ sudo apt -y install p7zip-full
 # clipboard
 sudo apt -y install xclip
 
+# terminal colours per host (xtermcontrol --bg ...)
+sudo apt -y install xtermcontrol
+
+# shell script linter
+sudo apt -y install shellcheck
+
+# terminal multiplexer, sessions survive a dropped ssh
+sudo snap install zellij --classic
+
 # vscode
 sudo snap install code --classic
 
